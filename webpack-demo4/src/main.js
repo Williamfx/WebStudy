@@ -13,3 +13,6 @@ console.log(x, y, add(10, 20))
 // 一次性加载 export xxx 导出所有成员，不采用结构赋值
 // import * as bar2 from './bar'
 // console.log(bar2)
+
+// 模块方式导入 css ，最终会打包成js，打包在bundle.js中
+import './css/style.css'

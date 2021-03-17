@@ -12,5 +12,16 @@ module.exports = {
         //path 必须是一个绝对路径，_dirname 是当前js的绝对路径D:\StudentProject\WebStudy\webpack-demo2
         path: path.join(__dirname, './dist/'), //打包的结果文件存储目录
         filename: 'bundle.js' //打包的结果文件名
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/, //正则表达式，匹配 .css 文件资源
+                use: [  //使用的loarder ，注意顺序不能错
+                    'style-loader',
+                    'css-loader'
+                ]
+            }
+        ] 
     }
 }
